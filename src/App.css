@@ -154,6 +154,10 @@
   margin-top: 1rem;
 }
 
+.toGoForm input {
+  padding: 0.5rem;
+}
+
 .timerButton {
   margin-bottom: 1rem;
 }

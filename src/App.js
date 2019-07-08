@@ -13,13 +13,14 @@ function App() {
   const [quarter, setQuarter] = useState(1);
   const [toGo, setToGo] = useState(0);
   const [ballOn, setBallOn] = useState(0);
-  const [timer, setTimer] = useState(0);
+  const [timerMin, setTimerMin] = useState(14);
+  const [timerSec, setTimerSec] = useState(59);
   const [timerOn, setTimerOn] = useState(false);
 
   useEffect(() => {
     let timer = null;
     if (timerOn) {
-      timer = setInterval(() => setTimer(timer => timer + 1), 1000);
+      timer = setInterval(() => setTimerSec(timer => timer - 1), 1000);
     }
     return () => {
       clearInterval(timer);
@@ -46,9 +47,9 @@ function App() {
     setQuarter(1);
     setToGo(0);
     setBallOn(0);
-    setTimer(0);
+    setTimerSec(0);
     toggle();
-    clearInterval(timer);
+    clearInterval(timerSec);
   };
 
   return (
@@ -62,7 +63,7 @@ function App() {
 
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">{timer}</div>
+          <div className="timer">{timerSec}</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
