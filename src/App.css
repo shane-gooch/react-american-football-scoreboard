@@ -3,13 +3,19 @@
   --red: #ff2d2b;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
 .scoreboard {
   width: 58%;
-  margin: 10rem auto;
+  margin: 2rem auto;
   background-color: #0b5402;
   color: white;
   border-radius: 0.5rem;
-  margin-top: 10rem;
+  margin-top: 3rem;
   padding: 5rem;
   border: 4px solid #aaaaaa;
 }
@@ -48,7 +54,7 @@
 .ballOn__title,
 .quarter__title {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 2rem;
 }
 
@@ -75,7 +81,7 @@
 
 .bottomRow {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   place-items: center;
   height: 20rem;
 }
@@ -88,6 +94,7 @@
   flex-direction: column;
   justify-content: space-around;
   place-items: center;
+  width: 145px;
 }
 
 .down__value,
@@ -106,11 +113,17 @@
   border: 1px solid white;
 }
 
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
 .buttons {
   width: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  /* place-items: center; */
 }
 
 .homeButtons__touchdown,
@@ -119,4 +132,32 @@
 .awayButtons__fieldGoal {
   margin: 1rem;
   border-radius: 4px;
+}
+
+.bottomButtons {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.downButtons {
+  text-align: center;
+}
+
+.quarterButtons {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.toGoForm {
+  margin-top: 1rem;
+}
+
+.toGoForm input {
+  padding: 0.5rem;
+}
+
+.timerButton {
+  margin-bottom: 1rem;
 }
